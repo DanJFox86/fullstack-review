@@ -1,6 +1,9 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/repos', { useNewUrlParser: true });
+const herokuMongoUri = 'mongodb://heroku_fm1933fs:9lhbsnq2f4jlfu6qqs865lociv@ds263927.mlab.com:63927/heroku_fm1933fs';
+
+// mongoose.connect('mongodb://localhost/repos', { useNewUrlParser: true });
+mongoose.connect(herokuMongoUri, { useNewUrlParser: true });
 // mongoose.connect('mongodb://localhost/fetcher', function(err) {
 //   console.log(`error triggered: `, !!err);
 // });

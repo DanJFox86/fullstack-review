@@ -39,7 +39,7 @@ db.once('open', function() {
 //   console.log(db._readyState);
 // }, 10000);
 
-let save = (repo) => {
+let save = (repo, callback) => {
   // TODO: Your code here
   // This function should save a repo or repos to
   // the MongoDB

@@ -17,7 +17,8 @@ app.post('/repos', function (req, res) {
     if (req.body.data !== req.body.data.replace(/[^A-Za-z0-9_]+/g, '')) {
       res.send('Naughty hobbitses');
     } else {
-      gh.getReposByUsername(req.body.data);
+      gh.getReposByUsername(req.body.data); 
+      // Need to refactor res.send to a callback, only called after data has been processed into mongoDB
       res.send('message received');
     }
   }

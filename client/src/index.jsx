@@ -31,7 +31,7 @@ class App extends React.Component {
     console.log(`${term} was searched.`);
     $.post('/repos', {data: term}, function(response) {
       console.log(response);
-      setTimeout( () => {
+      setTimeout( () => {  // ... not the way to do it, race condition is happening, need to refactor... this works for now
         console.log('now going to get top 25')
         $.get('/repos', function(response) {
           updateCB(response)

@@ -15,7 +15,8 @@ let getReposByUsername = (username) => {
   request(options, function(error, response, body) {
     body = JSON.parse(body);
     if(Array.isArray(body) === true) {
-      body.forEach(function(repo) {
+      body.forEach(function(repo) {  // Send callback here? Or need to refactor db.save
+                                     // to return promises, then Promise.all() to run callback.
         db.save(repo);
       });
     }

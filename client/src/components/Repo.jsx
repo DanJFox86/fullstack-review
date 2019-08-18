@@ -1,8 +1,6 @@
 import React from 'react';
 
 const Repo = (props) => {
- 
-
     let id = props.repo.id;
     let name = props.repo.name;
     let repoUrl = props.repo.url;

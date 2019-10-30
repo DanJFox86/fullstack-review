@@ -57,13 +57,6 @@ let save = (repo, callback) => {  // No callback being sent atm, not hurting any
 
 let top25 = (callback) => {
 
-//   models.Post     EXAMPLE FROM STACKOVERFLOW
-// .find()
-// .sort({'date': -1})
-// .limit(20)
-// .exec(function(err, posts) {
-//      // `posts` will be of length 20
-// });
   Repo.find()
     .sort({forks_count: -1})
     .limit(25)
